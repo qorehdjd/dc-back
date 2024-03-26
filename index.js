@@ -37,8 +37,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    // origin: ['http://localhost:3000', 'http://localhost:3080', 'https://www.portpolio-dcinside.site'],
-    origin: true,
+    origin: ['http://localhost:3000', 'http://localhost:3080', 'https://www.dcinside-web.shop'],
     credentials: true,
   }),
 );
@@ -51,7 +50,6 @@ app.use(
     saveUninitialized: false,
     cookie: {
       httpOnly: true, // 스크립트 공격 방어 (XSS)
-      secure: true,
     },
   }),
 );
